@@ -16,8 +16,9 @@ class AskRequest(BaseModel):
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "chunks_indexed": len(_pipeline.chunks),
-            "embedder": _pipeline.embedder.name, "store": _pipeline.store.name}
+    return {"status": "ok", "backend": _pipeline.backend,
+            "chunks_indexed": len(_pipeline.chunks),
+            "embedder": _pipeline.embedder_name, "store": _pipeline.store_name}
 
 
 @app.post("/ask")
