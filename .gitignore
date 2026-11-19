@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.egg-info/
+.pytest_cache/
+models/*.pkl
+models/*.joblib
+data/output/
+outputs/
+logs/*.jsonl
+.DS_Store
